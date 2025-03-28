@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <h1 class="title" style="font-size:50px">Currency Converter Assistant</h1>
+    <p class="subtitle">Convert currencies and get instant assistance</p>
+
+    <div class="container">
+        <!-- Left side: Form for conversion -->
+        <div class="conversion-box">
+            <img src="{{ url_for('static', filename='cc.jpeg') }}" class="conversion-image">
+            <form id="currency-form">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+                <label for="from">From</label>
+                <select id="from" name="from">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="AUD">AUD - Australian Dollar</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="CNY">CNY - Chinese Yuan</option>
+                    <option value="BRL">BRL - Brazilian Real</option>
+                    <option value="ZAR">ZAR - South African Rand</option>
+                </select>
+
+                <label for="to">To</label>
+                <select id="to" name="to">
+                    <option value="USD">USD - US Dollar</option>
+                    <option value="EUR">EUR - Euro</option>
+                    <option value="INR">INR - Indian Rupee</option>
+                    <option value="GBP">GBP - British Pound</option>
+                    <option value="AUD">AUD - Australian Dollar</option>
+                    <option value="CAD">CAD - Canadian Dollar</option>
+                    <option value="JPY">JPY - Japanese Yen</option>
+                    <option value="CNY">CNY - Chinese Yuan</option>
+                    <option value="BRL">BRL - Brazilian Real</option>
+                    <option value="ZAR">ZAR - South African Rand</option>
+                </select>
+
+                <label for="question">Question</label>
+                <input type="text" id="question" name="question" placeholder="What is this amount in the target currency?" required>
+
+                <button type="submit">Convert</button>
+            </form>
+
+            <!-- Prediction Form -->
+            <form id="prediction-form">
+                <label for="days_ahead">Days Ahead</label>
+                <input type="number" id="days_ahead" name="days_ahead" placeholder="Enter days ahead" required>
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+
+        <!-- Right side: Chatbot history -->
+        <div class="chatbox">
+            <img src="{{ url_for('static', filename='bitcoin.jpeg') }}" class="chat-image">
+            <h2>AI Currency Expert</h2>
+            <div id="chat-history">
+                <!-- Past conversions will be shown here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>

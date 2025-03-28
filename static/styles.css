@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    color: #2c3e50;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.conversion-box, .chatbox {
+    width: 45%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.conversion-image, .chat-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+input, select, button {
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #1f618d;
+}
+
+.chatbox {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+#chat-history {
+    margin-top: 15px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.question, .response {
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.question {
+    font-weight: bold;
+}

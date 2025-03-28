@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <style>
+        body {
+            background: url('https://img.freepik.com/premium-vector/global-currency-background_115579-405.jpg') no-repeat center center/cover;
+            color: #333;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 86, 179, 0.8);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .navbar a:hover {
+            color: #ffcc00;
+        }
+        .container {
+            margin-top: 80px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            display: inline-block;
+        }
+        .title {
+            font-size: 48px;
+            font-weight: 700;
+            color: #0056b3;
+        }
+        .button {
+            margin-top: 30px;
+            padding: 15px 30px;
+            background: linear-gradient(135deg, #ffcc00, #ff9900);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: inline-block;
+        }
+        .button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            margin-top: 80px;
+            padding: 20px;
+            background: rgba(0, 86, 179, 0.8);
+            color: white;
+            font-size: 14px;
+        }
+        .chatbot-button {
+            background: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+        }
+        .chatbot-button:hover {
+            background: #003d80;
+        }
+        .chatbot-icon {
+            width: 24px;
+            height: 24px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+    </div>
+    <br><br><br>
+    <div class="container">
+        <h1 class="title">Currency Converter</h1>
+
+        <!-- Changed to an 'a' tag with proper Flask URL -->
+        <a href="{{ url_for('index') }}" class="chatbot-button">
+            <img src="https://cdn-icons-png.flaticon.com/512/4712/4712109.png" alt="Chatbot Icon" class="chatbot-icon">
+            Convert with me
+        </a>
+    </div>
+
+    <br><br><br><br>
+
+    <div class="footer">&copy; 2025 Currency Converter</div>
+</body>
+</html>
